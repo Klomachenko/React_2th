@@ -1,6 +1,8 @@
+import '../../styles/Atoms/Button.css'
+
 const Button = ({ onClick, children }) => {
     return (
-        <button
+        <button className="button"
             onClick={(e) => {
                 e.preventDefault();
                 onClick();

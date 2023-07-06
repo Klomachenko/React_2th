@@ -1,11 +1,6 @@
-const Label = ({
-    children, htmlFor, className
-}) => {
+const Label = ({ children, htmlFor, className }) => {
     return (
-        <label
-            htmlFor={htmlFor}
-            className={className}
-        >
+        <label htmlFor={htmlFor} className={className}>
             {children}
         </label>
     )

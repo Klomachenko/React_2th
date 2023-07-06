@@ -8,7 +8,7 @@ const useInput = (initialValue) => {
         setValue((prev) => ({ ...prev, [name]: value }))
     }
 
-    return [value, handleOnChange]
+    return { value, handleOnChange }
 }
 
 export default useInput;

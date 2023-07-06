@@ -2,12 +2,11 @@ import Container from "../atoms/Container"
 import InputGroup from "../molecules/InputGroup"
 import Button from "../atoms/Button"
 import Title from "../atoms/Title"
-import { useEffect, useState } from "react"
 import useInput from "../../hooks/useInput"
 import { login } from "../../services/api"
 
 const LoginForm = () => {
-    const [value, handleOnChange] = useInput({
+    const { value, handleOnChange } = useInput({
         email: "",
         password: "",
     })
@@ -26,7 +25,7 @@ const LoginForm = () => {
                 onChange={handleOnChange}></InputGroup>
             <Button
                 onClick={() => {
-                    //f로그인 요청
+                    // 로그인 요청
                     login({
                         email: value.email,
                         password: value.password,

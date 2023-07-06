@@ -2,11 +2,11 @@ import Input from "../atoms/Input";
 import Box from "../atoms/Box";
 import Label from "../atoms/Label";
 
-const InputGroup = ({ id, type, value, onChange, className, label, placeholder }) => {
+const InputGroup = ({ id, type, value, onChange, name, className, label, placeholder }) => {
     return (
         <Box className={className}>
-            <label htmlFor={id}>{label}</label>
-            <Input id={id} type={type} value={value} onChange={onChange} placeholder={placeholder}></Input>
+            <Label htmlFor={id}>{label}</Label>
+            <Input id={id} type={type} value={value} name={name} onChange={onChange} placeholder={placeholder}></Input>
         </Box>
     );
 };
